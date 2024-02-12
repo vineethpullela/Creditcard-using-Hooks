@@ -3,141 +3,185 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
 `
+export const CreditCardDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3b4b69;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+`
+
+export const CreditCardHeadingContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+export const CreditCardHeading = styled.h1`
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    margin-top: 96px;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+`
+export const HorizontalLine = styled.hr`
+  width: 118px;
+  border: 2px solid #ffd773;
+  margin: 0;
+  @media screen and (min-width: 768px) {
+    width: 173px;
+  }
+`
 
 export const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(to bottom, #3b4b69, #344e7a);
-  height: 60vh;
-  width: 100vw;
-  padding: 20px;
+  margin-top: 48px;
+  margin-bottom: 48px;
   @media screen and (min-width: 768px) {
-    width: 50vw;
-    height: 100vh;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    flex-grow: 1;
   }
 `
 
-export const CardHeading = styled.h1`
-  font-family: 'Roboto';
-  font-size: 30px;
-  color: #ffffff;
-  font-weight: 500;
-  line-height: 1;
-  margin-bottom: 0;
-  align-self: center;
-  border-bottom: 4px solid #ffd773;
-`
-export const Line = styled.hr`
-  border: 2px solid #ffd773;
-  width: 130px;
-  margin-left: 28%;
-`
-export const CreditCardContainer = styled.div`
-  min-height: 220px;
-  width: 360px;
-  border-radius: 10px;
+export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   background-image: url('https://assets.ccbp.in/frontend/hooks/credit-card-bg.png');
   background-size: cover;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px 30px;
-
+  background-repeat: no-repeat;
+  width: 281px;
+  height: 200px;
+  border-radius: 19px;
+  padding: 24px;
+  box-shadow: 0px 4px 33px #344e7a;
   @media screen and (min-width: 768px) {
-    margin-top: 25%;
+    width: 375px;
+    height: 295px;
+    border-radius: 42px;
+    padding: 32px;
+  }
+  @media screen and (min-width: 992px) {
+    width: 475px;
+    height: 325px;
+    padding: 48px;
   }
 `
-
 export const CardNumber = styled.p`
-  font-family: 'Roboto';
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 1.3;
   color: #ffffff;
-  margin-bottom: 5px;
-`
-export const CardNameLabel = styled.p`
   font-family: 'Roboto';
-  color: #d3d9e0;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 1.3;
-  margin-top: 5px;
-`
-export const CardHolderName = styled.p`
-  font-family: 'Roboto';
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1;
-  color: #ffffff;
-  margin-top: 0;
-`
-
-export const PaymentCardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  margin: auto;
-  padding: 15px;
-  height: 50vh;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
   @media screen and (min-width: 768px) {
-    height: 40vh;
-    padding: 20px;
+    font-size: 32px;
+    line-height: 1.33;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 42px;
   }
 `
-export const PaymentContainer = styled.div`
-  min-height: 250px;
-  width: 400px;
-  box-shadow: 0 0 10px #c3cad9;
-  border-radius: 30px 25px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+export const CardholderNameText = styled.p`
+  color: #f1f5f9;
+  font-family: 'Roboto';
+  font-size: 10px;
+  margin: 0;
+  margin-top: 31px;
+  line-height: 1.2;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    margin-top: 52px;
+    line-height: 1.33;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 18px;
+  }
+`
+export const CardholderName = styled.p`
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0px;
+  margin-top: 7px;
+  min-height: 16px;
+  line-height: 1.33;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    margin-top: 12px;
+    min-height: 28px;
+    line-height: 1.5;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 24px;
+    min-height: 36px;
+  }
 `
 
-export const PaymentHeading = styled.h1`
-  font-family: 'Roboto';
-  font-size: 25px;
-  color: #344e7a;
-  font-weight: 400;
+export const PaymentContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+`
+export const PaymentMethodContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: '#ffffff';
+  width: 90%;
+  max-width: 350px;
+  border-radius: 8px;
+  margin-top: 32px;
+  padding: 32px 24px;
+  box-shadow: 0px 4px 16px #d3d9e0;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    padding: 48px;
+    max-width: 450px;
+  }
+`
+export const PaymentMethodHeading = styled.h1`
   text-align: center;
-`
-export const CardNumberInput = styled.input`
-  height: 40px;
-  width: 250px;
-  border-radius: 2px;
-  font-size: 14px;
-  border: 1px solid #d3d9e0;
-  outline: none;
-  padding: 8px 16px;
   color: #475569;
-  background-color: transprant;
-  margin-bottom: 20px;
   font-family: 'Roboto';
-  font-size: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 8px;
+  line-height: 1.33;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+  }
 `
-export const CardNameInput = styled.input`
-  height: 40px;
-  width: 250px;
-  border-radius: 2px;
-  font-size: 14px;
-  border: 1px solid #d3d9e0;
-  outline: none;
-  padding: 8px 16px;
+
+export const Input = styled.input`
   color: #475569;
-  background-color: transprant;
+  background-color: '#ffffff';
   font-family: 'Roboto';
-  font-size: 12px;
+  font-size: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  margin-top: 24px;
+  padding: 12px 24px;
+  outline: none;
+  @media screen and (min-width: 768px) {
+    padding: 16px 24px;
+  }
 `
